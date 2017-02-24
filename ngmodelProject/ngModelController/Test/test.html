@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MyTestProject</title>
+    <meta charset="utf-8" />
+    <script src="../../Scripts/angular.js"></script>
+    <script src="../Base/baseDirective.js"></script>
+    <script src="testController.js"></script>
+</head>
+<body>
+    <div ng-app="testModule" ng-controller="testController as vm">
+        <form name="myForm">
+            <smart-tag name="smart" ng-model="testModel"></smart-tag>
+            
+        </form>
+        <pre>Your model:{{testModel}}</pre>
+        <hr />
+        <pre>NgmodelController:{{myForm.smart|json}}</pre>
+        <time-duration  ng-model="time"></time-duration>
+        <pre>Your model:{{time}}</pre>
+    </div>
+</body>
+</html>
